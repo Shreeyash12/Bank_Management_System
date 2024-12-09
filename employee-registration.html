@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Registration</title>
+    <link rel="stylesheet" href="employee-registration.css">
+</head>
+<body>
+    <header>
+        <h1>Employee Registration</h1>
+    </header>
+    <main>
+        <form id="employeeForm">
+            <div class="form-group">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" maxlength="50" required>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" maxlength="50" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" maxlength="50" required>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" maxlength="50" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" maxlength="100" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="contactNumber">Contact Number:</label>
+                <input type="text" id="contactNumber" name="contactNumber" maxlength="10" pattern="\d{10}" required>
+            </div>
+            <button type="button" id="registerBtn">Register</button>
+        </form>
+        <div id="acknowledgment" class="hidden">
+            <h2>Registration Successful</h2>
+            <p class="success-message">Employee Registration set successfully!</p>
+            <p><strong>Employee ID:</strong> <span id="employeeID"></span></p>
+            <p><strong>Employee Name:</strong> <span id="employeeName"></span></p>
+            <p><strong>Email:</strong> <span id="employeeEmail"></span></p>
+        </div>
+    </main>
+    <script src="employee-registration.js"></script>
+</body>
+</html>
